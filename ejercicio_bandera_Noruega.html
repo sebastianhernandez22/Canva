@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandera de Noruega</title>
+
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      #flagContainer {
+        text-align: center;
+      }
+
+      canvas {
+        border: 2px solid black;
+      }
+    </style>
+
+</head>
+<body>
+    <div id="flagContainer">
+        <h1>Bandera de Noruega</h1>
+        <canvas id="norwegianFlag" width="440" height="320"></canvas>
+    </div>
+    <script>
+        
+        const canvas = document.getElementById('norwegianFlag');
+        const ctx = canvas.getContext('2d');
+
+        
+        const flagWidth = canvas.width;
+        const flagHeight = canvas.height;
+
+        
+        const whiteVerticalWidth = flagWidth * 4 / 22;
+        const whiteHorizontalHeight = flagHeight * 4 / 16;
+        const blueVerticalWidth = flagWidth * 2 / 22;
+        const blueHorizontalHeight = flagHeight * 2 / 16;
+
+        
+        const red = '#BA0C2F';
+        const white = '#FFFFFF';
+        const blue = '#00205B';
+
+        
+        ctx.fillStyle = red;
+        ctx.fillRect(0, 0, flagWidth, flagHeight);
+
+        
+        ctx.fillStyle = white;
+        ctx.fillRect(0, flagHeight * 6 / 16, flagWidth, whiteHorizontalHeight);
+
+        
+        ctx.fillStyle = white;
+        ctx.fillRect(flagWidth * 6 / 22, 0, whiteVerticalWidth, flagHeight);
+
+       
+        ctx.fillStyle = blue;
+        ctx.fillRect(0, flagHeight * 7 / 16, flagWidth, blueHorizontalHeight);
+
+        
+        ctx.fillStyle = blue;
+        ctx.fillRect(flagWidth * 7 / 22, 0, blueVerticalWidth, flagHeight);
+    </script>
+</body>
+</html>

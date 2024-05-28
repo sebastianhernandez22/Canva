@@ -6,7 +6,7 @@
 <title>Cuadrícula con colores aleatorios</title>
 <style>
   canvas {
-    border: 1px solid black;
+    border: 3px solid black;
   }
 </style>
 </head>
@@ -18,17 +18,15 @@
     var canvas = document.getElementById("miCanvas");
     var ctx = canvas.getContext("2d");
     
-    // Tamaño de cada celda de la cuadrícula
-    var cellSize = 10;
+    var cellSize =50;
     
-    // Dibujar la cuadrícula con colores aleatorios
     for (var x = 0; x < canvas.width; x += cellSize) {
       for (var y = 0; y < canvas.height; y += cellSize) {
-        // Generar un color aleatorio en formato RGB
-        var color = 'rgb(' + Math.floor(Math.random() * 256) + ',' + 
-                             Math.floor(Math.random() * 256) + ',' + 
-                             Math.floor(Math.random() * 256) + ')';
-        // Dibujar el cuadrado con el color aleatorio
+
+        var color = 'rgb(' + Math.floor(Math.random() * 250) + ',' + 
+                             Math.floor(Math.random() * 250) + ',' + 
+                             Math.floor(Math.random() * 250) + ')';
+
         ctx.fillStyle = color;
         ctx.fillRect(x, y, cellSize, cellSize);
       }
