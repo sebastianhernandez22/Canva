@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" hret="css/estilos.css">
+    <title>Canvas basico</title>
+</head>
+<body>
+    <h1>canvas basico</h1>
+    <canvas widht="500" height="300">
+        Tu navegador no soporta canvas
+    </canvas>
+    <script>
+        window.onload = function()
+        {
+            var canvas = document.getElementById("miCanvas");
+            if(canvas && canvas.getContext)
+            {
+                var ctx = canvas.getContext("2d");
+                if(ctx)
+                {
+                    alert("Bienvenidos al canvas de html");
+                }
+                else
+                {
+                    alert("error al crear el contexto");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
